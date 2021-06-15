@@ -23,6 +23,9 @@ export default {
   devOptions: {
     /* ... */
   },
+  alias: {
+    components: './src/components',
+  },
   buildOptions: {
     /* ... */
   },
