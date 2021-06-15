@@ -23,12 +23,29 @@ const getFileList = () => {
   return fileList;
 };
 
+const wrapper = (result) => {
+  const start = `<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body> `;
+
+  const end = ` </body>
+  </html>`;
+
+  return `${start}${result}${end}`;
+};
+
 const renderFile = async ({ file, name }) => {
   const Component = await import(`./${inputFolder}/${file}`);
 
-  const result = await ReactDOMServer.renderToStaticMarkup(
+  let result = await ReactDOMServer.renderToStaticMarkup(
     /*#__PURE__*/ React.createElement(Component.default, null),
   );
+
+  result = wrapper(result);
 
   fs.writeFile(`${outputFolder}/${name}.html`, result);
 };
