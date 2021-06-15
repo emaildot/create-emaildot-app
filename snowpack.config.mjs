@@ -25,6 +25,7 @@ export default {
   },
   alias: {
     components: './src/components',
+    EmailBuilder: './src/EmailBuilder',
   },
   buildOptions: {
     /* ... */

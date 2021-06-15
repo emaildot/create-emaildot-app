@@ -30,7 +30,11 @@ const wrapper = (result) => {
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
-    <body> `;
+    <body style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  "> `;
 
   const end = ` </body>
   </html>`;

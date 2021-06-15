@@ -1,7 +1,12 @@
 import React from 'react';
+import { EmailMain, Div } from 'EmailBuilder';
 
 const HelloWorld = () => {
-  return <div>Goodbye</div>;
+  return (
+    <EmailMain>
+      <Div>Goodbye</Div>
+    </EmailMain>
+  );
 };
 
 export default HelloWorld;
