@@ -42,12 +42,6 @@ const start = async () => {
         renderFile(value);
       });
     });
-
-    // const result = await ReactDOMServer.renderToStaticMarkup(
-    //   /*#__PURE__*/ React.createElement(HelloWorld, null),
-    // );
-
-    // await fs.writeFile(`${outputFolder}/one.html`, result);
   } catch (e) {
     console.error(e);
   }
