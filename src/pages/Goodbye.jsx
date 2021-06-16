@@ -3,7 +3,14 @@ import { EmailMain, Div, Image } from '../EmailBuilder';
 
 const Goodbye = () => {
   return (
-    <EmailMain title="Bye">
+    <EmailMain
+      title="Bye"
+      googleFont="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,300,400,400i,500,600,700&display=swap"
+      bodyStyles={{
+        fontFamily:
+          "'IBM Plex Sans', Helvetica Neue, Helvetica, Roboto, Segoe UI, sans-serif",
+      }}
+    >
       <Div>Goodbye</Div>
       <Image
         src="images/siddhesh-mangela-IchtL-8qllM-unsplash.jpg"
