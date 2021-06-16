@@ -5,6 +5,9 @@ import fsPure from 'fs';
 import ReactDOMServer from 'react-dom/server';
 import jsBeautify from 'js-beautify';
 import { kebabize } from './lib/utils';
+import generatorConfig from './generator.config';
+
+const { outputExtension = 'html' } = generatorConfig || {};
 
 const inputFolder = 'lib/pages';
 const outputFolder = 'build';
@@ -43,7 +46,7 @@ const renderFile = async ({ file, name }) => {
 
   result = wrapper(result);
 
-  fs.writeFile(`${outputFolder}/${name}.html`, result);
+  fs.writeFile(`${outputFolder}/${name}.${outputExtension}`, result);
 };
 
 const start = async () => {
