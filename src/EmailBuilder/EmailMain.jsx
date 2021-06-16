@@ -31,12 +31,20 @@ const EmailMain = ({
   };
 
   useEffect(() => {
-    if (!isProd && googleFont) {
-      const link = document.createElement('link');
-      link.href = googleFont;
-      link.rel = 'stylesheet';
+    if (!isProd) {
+      if (title) {
+        document.title = title;
+      } else {
+        document.title = 'Email Builder';
+      }
 
-      document.head.appendChild(link);
+      if (googleFont) {
+        const link = document.createElement('link');
+        link.href = googleFont;
+        link.rel = 'stylesheet';
+
+        document.head.appendChild(link);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
