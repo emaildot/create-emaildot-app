@@ -1,6 +1,6 @@
 # EMAIL.
 
-a react based unopinionated framework to create static email templates.
+an unopinionated React-based framework for creating static email templates.
 
 ## Setup
 ###1) clone the repo
