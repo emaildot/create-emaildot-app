@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from './Layout';
 import Div from './Div';
 import { isProd } from '../utils';
@@ -13,15 +13,33 @@ const EmailMain = ({
   title = '',
   googleFont = '',
 }) => {
-  const stylesFinal = {
+  let stylesFinal = {
     // ...stylesInternal,
     ...styles,
   };
+
+  if (!isProd && googleFont) {
+    stylesFinal = {
+      ...stylesFinal,
+      fontFamily: bodyStyles.fontFamily ? bodyStyles.fontFamily : '',
+    };
+  }
 
   const bodyStylesFinal = {
     ...bodyStylesInternal,
     ...bodyStyles,
   };
+
+  useEffect(() => {
+    if (!isProd && googleFont) {
+      const link = document.createElement('link');
+      link.href = googleFont;
+      link.rel = 'stylesheet';
+
+      document.head.appendChild(link);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
