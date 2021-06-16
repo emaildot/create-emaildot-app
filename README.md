@@ -52,11 +52,11 @@ use `npm start` to start the dev server
 
 ### Routing
 
-The development routing is based on react-router so all pages should be added `./src/add-routes-here.js`
+The development routing is based on react-router so all pages should be added to `./src/add-routes-here.js`
 
 ### Public folder
 
-but global resources in the public folder
+Put global resources in the public folder
 
 ## Generate/Build Email
 
