@@ -1,0 +1,86 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.App {
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.routes {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.routes.grey {
+  background-color: #eaeaea;
+}
+
+.routes.black {
+  background-color: #000;
+}
+
+.routes > div {
+  box-sizing: border-box;
+  overflow: auto;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.controls {
+  box-sizing: border-box;
+  display: none;
+  background-color: whitesmoke;
+  padding: 16px;
+  padding-left: 24px;
+  padding-top: 0;
+  font-family: Segoe UI, Helvetica Neue, Helvetica, Roboto, sans-serif;
+}
+
+.controls > section {
+  margin: 16px 0;
+  margin-bottom: 28px;
+}
+
+.controls > section .title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.controls > section .selector {
+  display: block;
+}
+
+.controls > section .selector label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .App {
+    display: flex;
+  }
+
+  .routes {
+    flex: 1;
+  }
+
+  .routes.email > div {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .controls {
+    display: block;
+    overflow: auto;
+    height: 100vh;
+    width: 180px;
+  }
+}
