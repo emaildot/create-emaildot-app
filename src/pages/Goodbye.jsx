@@ -1,5 +1,5 @@
 import React from 'react';
-import { EmailMain, Div, Image, Link } from '../EmailBuilder';
+import { EmailMain, Div, Image, Link, Paragraph as P } from '../EmailBuilder';
 
 const Goodbye = () => {
   return (
@@ -21,6 +21,8 @@ const Goodbye = () => {
       <Link href="https://github.com/siddacool/email-builder" target="_blank">
         Homepage
       </Link>
+
+      <P>Yoooo</P>
     </EmailMain>
   );
 };
