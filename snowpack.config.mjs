@@ -23,10 +23,6 @@ export default {
   devOptions: {
     /* ... */
   },
-  alias: {
-    components: './src/components',
-    EmailBuilder: './src/EmailBuilder',
-  },
   buildOptions: {
     /* ... */
   },

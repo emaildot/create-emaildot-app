@@ -1,6 +1,5 @@
 import React from 'react';
-import EmailMain from '../EmailBuilder/EmailMain.js';
-import Div from '../EmailBuilder/Div.js';
+import { EmailMain, Div } from '../EmailBuilder';
 
 const style = {
   color: 'red',

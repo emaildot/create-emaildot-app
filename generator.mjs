@@ -2,8 +2,8 @@ import React from 'react';
 import { promises as fs } from 'fs';
 import Promise from 'promise';
 import fsPure from 'fs';
-import ReactDOMServer from 'react-dom/server.js';
-import { kebabize } from './lib/EmailBuilder/utils.js';
+import ReactDOMServer from 'react-dom/server';
+import { kebabize } from './lib/utils';
 
 const inputFolder = 'lib/pages';
 const outputFolder = 'build';

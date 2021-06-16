@@ -1,5 +1,5 @@
 import React from 'react';
-import Div from './Div.js';
+import Div from './Div';
 
 // const stylesInternal = {};
 

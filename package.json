@@ -7,7 +7,7 @@
     "babel-transpile": "babel src -d lib && babel public --out-dir build --copy-files",
     "generate": "node generator.mjs",
     "prebuild": "rm -rf lib && rm -rf build",
-    "build": "mkdir build && npm run babel-transpile && node generator.mjs"
+    "build": "mkdir build && npm run babel-transpile && node --experimental-modules --es-module-specifier-resolution=node generator.mjs"
   },
   "eslintConfig": {
     "extends": "react-app"

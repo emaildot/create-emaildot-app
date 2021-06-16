@@ -1,18 +1,1 @@
-{
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "components/*": [
-        "./components/*"
-      ],
-      "EmailMain/*": [
-        "./EmailMain/*"
-      ],
-    },
-  },
-  "exclude": [
-    "node_modules",
-    "build",
-    "public",
-  ]
-}
+{}
