@@ -3,6 +3,7 @@ import { promises as fs } from 'fs';
 import Promise from 'promise';
 import fsPure from 'fs';
 import ReactDOMServer from 'react-dom/server';
+import jsBeautify from 'js-beautify';
 import { kebabize } from './lib/utils';
 
 const inputFolder = 'lib/pages';
@@ -24,22 +25,13 @@ const getFileList = () => {
 };
 
 const wrapper = (result) => {
-  const start = `<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body style="
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  "> `;
+  const start = `<!DOCTYPE html>`;
 
-  const end = ` </body>
-  </html>`;
+  let toReturn = `${start}${result}`;
 
-  return `${start}${result}${end}`;
+  toReturn = jsBeautify.html(toReturn);
+
+  return toReturn;
 };
 
 const renderFile = async ({ file, name }) => {
