@@ -1,5 +1,10 @@
 # Email Builder
 
+an Email builder laveraging the server side rendering of `ReactDOMServer` to create statically generated Email templates
+
+- Preview - `npm start`
+- Generate email templates - `npm run build` - results will be in `./build` folder
+
 ## Pages
 
 Whatever is put inside `./src/pages/` folder is considered as a new email layout
