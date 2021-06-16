@@ -27,10 +27,15 @@ const getFileList = () => {
   return fileList;
 };
 
+const ejsTagsFix = (result) =>
+  result.replace(/&lt;%=/g, '<%=').replace(/%&gt;/g, '%>');
+
 const wrapper = (result) => {
   const start = `<!DOCTYPE html>`;
 
   let toReturn = `${start}${result}`;
+
+  toReturn = ejsTagsFix(toReturn);
 
   toReturn = jsBeautify.html(toReturn);
 
