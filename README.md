@@ -1,6 +1,6 @@
 # Email Builder
 
-an Email builder laveraging the server side rendering of `ReactDOMServer` to create statically generated Email templates
+an Email builder leveraging the server-side rendering capabilities of `ReactDOMServer` to create statically generated Email templates.
 
 - Preview - `npm start`
 - Generate email templates - `npm run build` - results will be in `./build` folder
@@ -46,21 +46,21 @@ export default {
 
 ## Develop and test
 
-Email Builder uses Snowpack for development server
+Email Builder uses Snowpack for the development server
 
-use `npm start` to start dev server
+use `npm start` to start the dev server
 
 ### Routing
 
-The development routing is based on react router so all pages should be added `./src/add-routes-here.js`
+The development routing is based on react-router so all pages should be added `./src/add-routes-here.js`
 
 ### Public folder
 
-but global resources in public folder
+but global resources in the public folder
 
 ## Generate/Build Email
 
-use `npm run build` to generate emails based contents in pages folder. generated pages will appear in
+use `npm run build` to generate emails-based contents in the pages folder. generated pages will appear in
 `./build` folder
 
 ---
@@ -77,7 +77,7 @@ value is true for build and false for development
 
 ## Components
 
-Email builder provides a verity of components
+Email builder provides a variety of components
 
 ```jsx
 import {
@@ -157,7 +157,7 @@ Props:
 
 ### RawHTML
 
-treat value as raw HTML
+treat the value as raw HTML
 
 example
 
@@ -166,7 +166,7 @@ import React from 'react';
 import { Div, RawHTML } from '../EmailBuilder';
 
 const text = `<p>
-  <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  <b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 </p>`;
 
 const Welcome = () => {
@@ -239,5 +239,3 @@ const Welcome = () => {
 
 export default Welcome;
 ```
-
----
