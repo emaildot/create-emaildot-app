@@ -7,7 +7,32 @@ import {
   Paragraph as P,
   List,
   ListItem,
+  DataList,
 } from '../EmailBuilder';
+
+const dataListData = [
+  {
+    id: '1',
+    description: 'one',
+  },
+  {
+    id: '2',
+    description: 'two',
+  },
+  {
+    id: '3',
+    description: (
+      <>
+        <b>Three</b> Three
+      </>
+    ),
+  },
+  {
+    id: '4',
+    description: '<b>Four</b>',
+    isRawHTML: true,
+  },
+];
 
 const Goodbye = () => {
   return (
@@ -37,6 +62,8 @@ const Goodbye = () => {
         <ListItem>two</ListItem>
         <ListItem>three</ListItem>
       </List>
+
+      <DataList data={dataListData} />
     </EmailMain>
   );
 };

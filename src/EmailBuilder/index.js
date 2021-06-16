@@ -6,6 +6,7 @@ import LinkComponent from './Link';
 import ParagraphComponent from './Paragraph';
 import ListComponent from './List';
 import ListItemComponent from './ListItem';
+import DataListComponent from './DataList';
 
 export const EmailMain = EmailMainComponent;
 export const Div = DivComponent;
@@ -15,3 +16,4 @@ export const Link = LinkComponent;
 export const Paragraph = ParagraphComponent;
 export const List = ListComponent;
 export const ListItem = ListItemComponent;
+export const DataList = DataListComponent;
