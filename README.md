@@ -77,7 +77,7 @@ value is true for build and false for development
 
 ## Components
 
-Email builder provides a variety of components
+Email builder provides a variety of components `./src/EmailBuilder`
 
 ```jsx
 import {
