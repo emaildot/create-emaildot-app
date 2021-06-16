@@ -1,3 +1,3 @@
 export default {
-  outputExtension: 'ejs',
+  outputExtension: 'html',
 };
