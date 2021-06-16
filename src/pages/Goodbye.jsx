@@ -1,5 +1,13 @@
 import React from 'react';
-import { EmailMain, Div, Image, Link, Paragraph as P } from '../EmailBuilder';
+import {
+  EmailMain,
+  Div,
+  Image,
+  Link,
+  Paragraph as P,
+  List,
+  ListItem,
+} from '../EmailBuilder';
 
 const Goodbye = () => {
   return (
@@ -23,6 +31,12 @@ const Goodbye = () => {
       </Link>
 
       <P>Yoooo</P>
+
+      <List type="ol">
+        <ListItem>One</ListItem>
+        <ListItem>two</ListItem>
+        <ListItem>three</ListItem>
+      </List>
     </EmailMain>
   );
 };
