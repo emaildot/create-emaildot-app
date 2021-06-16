@@ -1,15 +1,33 @@
 import React from 'react';
+import Layout from './Layout';
 import Div from './Div';
+import { isProd } from '../utils';
 
 // const stylesInternal = {};
+const bodyStylesInternal = { padding: 0, margin: 0, boxSizing: 'border-box' };
 
-const EmailMain = ({ children = '', styles = {} }) => {
+const EmailMain = ({ children = '', styles = {}, bodyStyles = {} }) => {
   const stylesFinal = {
     // ...stylesInternal,
     ...styles,
   };
 
-  return <Div styles={stylesFinal}>{children}</Div>;
+  const bodyStylesFinal = {
+    ...bodyStylesInternal,
+    ...bodyStyles,
+  };
+
+  return (
+    <>
+      {isProd ? (
+        <Layout styles={bodyStylesFinal}>
+          <Div styles={stylesFinal}>{children}</Div>
+        </Layout>
+      ) : (
+        <Div styles={stylesFinal}>{children}</Div>
+      )}
+    </>
+  );
 };
 
 export default EmailMain;
