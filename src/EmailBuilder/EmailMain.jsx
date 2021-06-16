@@ -6,7 +6,12 @@ import { isProd } from '../utils';
 // const stylesInternal = {};
 const bodyStylesInternal = { padding: 0, margin: 0, boxSizing: 'border-box' };
 
-const EmailMain = ({ children = '', styles = {}, bodyStyles = {} }) => {
+const EmailMain = ({
+  children = '',
+  styles = {},
+  bodyStyles = {},
+  title = '',
+}) => {
   const stylesFinal = {
     // ...stylesInternal,
     ...styles,
@@ -20,7 +25,7 @@ const EmailMain = ({ children = '', styles = {}, bodyStyles = {} }) => {
   return (
     <>
       {isProd ? (
-        <Layout styles={bodyStylesFinal}>
+        <Layout styles={bodyStylesFinal} title={title}>
           <Div styles={stylesFinal}>{children}</Div>
         </Layout>
       ) : (

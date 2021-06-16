@@ -1,12 +1,12 @@
 import React from 'react';
 import { EmailMain, Div } from '../EmailBuilder';
 
-const HelloWorld = () => {
+const Goodbye = () => {
   return (
-    <EmailMain>
+    <EmailMain title="Bye">
       <Div>Goodbye</Div>
     </EmailMain>
   );
 };
 
-export default HelloWorld;
+export default Goodbye;

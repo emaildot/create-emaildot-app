@@ -5,12 +5,12 @@ const style = {
   color: 'red',
 };
 
-const HelloWorld = () => {
+const Welcome = () => {
   return (
-    <EmailMain>
+    <EmailMain title="Welcome">
       <Div styles={style}>Hello</Div>
     </EmailMain>
   );
 };
 
-export default HelloWorld;
+export default Welcome;
