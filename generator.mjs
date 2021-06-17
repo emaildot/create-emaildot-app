@@ -7,7 +7,7 @@ import jsBeautify from 'js-beautify';
 import { kebabize } from './lib/utils';
 import generatorConfig from './generator.config';
 
-const { outputExtension = 'html' } = generatorConfig || {};
+const { outputExtension = 'html', minify = false } = generatorConfig || {};
 
 const inputFolder = 'lib/pages';
 const outputFolder = 'build';
@@ -37,7 +37,9 @@ const wrapper = (result) => {
 
   toReturn = ejsTagsFix(toReturn);
 
-  toReturn = jsBeautify.html(toReturn);
+  if (!minify) {
+    toReturn = jsBeautify.html(toReturn);
+  }
 
   return toReturn;
 };
