@@ -3,13 +3,14 @@
 an unopinionated React-based framework for creating static email templates.
 
 ## Setup
+
 ### 1) clone the repo
 
-`git clone git@github.com:siddacool/emaildot.git` 
+`git clone git@github.com:emaildot/create-emaildot-app.git`
 
 or
 
-`git clone https://github.com/siddacool/emaildot.git`
+`git clone https://github.com/emaildot/create-emaildot-app.git`
 
 ### 2) Install
 
@@ -20,5 +21,4 @@ or
 - Preview - `npm start`
 - Generate email templates - `npm run build` - results will be in `./build` folder
 
-
-### [Next Steps](https://github.com/siddacool/emaildot/wiki "Documentation ")
+### [Next Steps](https://github.com/siddacool/emaildot/wiki 'Documentation ')
